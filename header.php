@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" <?php language_attributes(); ?>>
 <head>
     <!--- basic page needs
     ================================================== -->
-    <meta charset="utf-8">
-    <title>Philosophy</title>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <title><?php bloginfo('title-tag'); ?></title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -18,15 +18,6 @@
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <!-- script
-    ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
-
-    <!-- favicons
-    ================================================== -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
+    <?php wp_head(); ?>
 </head>
 <body id="top">
