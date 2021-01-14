@@ -11,7 +11,7 @@
                 <div class="block-1-2 block-m-full popular__posts">
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
-                            <img src="images/thumbs/small/wheel-150.jpg" alt="">
+                            <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/thumbs/small/wheel-150.jpg" alt="">
                         </a>
                         <h5><a href="#0">Visiting Theme Parks Improves Your Health.</a></h5>
                         <section class="popular__meta">
@@ -21,7 +21,7 @@
                     </article>
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
-                            <img src="images/thumbs/small/shutterbug-150.jpg" alt="">
+                            <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/thumbs/small/shutterbug-150.jpg" alt="">
                         </a>
                         <h5><a href="#0">Key Benefits Of Family Photography.</a></h5>
                         <section class="popular__meta">
@@ -31,7 +31,7 @@
                     </article>
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
-                            <img src="images/thumbs/small/cookies-150.jpg" alt="">
+                            <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/thumbs/small/cookies-150.jpg" alt="">
                         </a>
                         <h5><a href="#0">Absolutely No Sugar Oatmeal Cookies.</a></h5>
                         <section class="popular__meta">
@@ -41,7 +41,7 @@
                     </article>
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
-                            <img src="images/thumbs/small/beetle-150.jpg" alt="">
+                            <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/thumbs/small/beetle-150.jpg" alt="">
                         </a>
                         <h5><a href="#0">Throwback To The Good Old Days.</a></h5>
                         <section class="popular__meta">
@@ -51,7 +51,7 @@
                     </article>
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
-                            <img src="images/thumbs/small/tulips-150.jpg" alt="">
+                            <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/thumbs/small/tulips-150.jpg" alt="">
                         </a>
                         <h5><a href="#0">10 Interesting Facts About Caffeine.</a></h5>
                         <section class="popular__meta">
@@ -61,7 +61,7 @@
                     </article>
                     <article class="col-block popular__post">
                         <a href="#0" class="popular__thumb">
-                            <img src="images/thumbs/small/salad-150.jpg" alt="">
+                            <img src=" <?php echo get_template_directory_uri(); ?>/assets/images/thumbs/small/salad-150.jpg" alt="">
                         </a>
                         <h5><a href="#0">Healthy Mediterranean Salad Recipes</a></h5>
                         <section class="popular__meta">
