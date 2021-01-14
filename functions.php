@@ -27,3 +27,16 @@
 
     }
     add_action('after_setup_theme', 'philosophy_theme_setup');
+
+    function philosophy_assets_enqueue() {
+        // Style Enqueue
+        wp_enqueue_style('theme-stylesheet', get_stylesheet_uri());
+        wp_enqueue_style('base-stylesheet', get_template_directory_uri().'/assets/css/base.css');
+        wp_enqueue_style('vendor-stylesheet', get_template_directory_uri().'/assets/css/vendor.css');
+        wp_enqueue_style('main-stylesheet', get_template_directory_uri().'/assets/css/main.css');
+
+        // Scripts Enqueue
+        wp_enqueue_script('plugins-script', get_template_directory_uri().'/assets/js/plugins.js', array('jquery'), time(), true);
+        wp_enqueue_script('main-script', get_template_directory_uri().'/assets/js/main.js', array('jquery'), time(), true);
+    }
+    add_action('wp_enqueue_scripts', 'philosophy_assets_enqueue');
