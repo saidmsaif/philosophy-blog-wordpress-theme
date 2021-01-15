@@ -25,6 +25,10 @@
         );
         add_theme_support('post-formats', $philosophy_post_formats);
 
+        register_nav_menus(array(
+            'primary-menu'      =>  __('Primary Menu', 'philosophy'),
+        ));
+
     }
     add_action('after_setup_theme', 'philosophy_theme_setup');
 
