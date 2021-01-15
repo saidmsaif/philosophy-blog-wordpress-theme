@@ -6,8 +6,12 @@
         <div class="header__content row">
 
             <div class="header__logo">
-                <a class="logo" href="index.html">
-                    <img src="images/logo.svg" alt="Homepage">
+                <a class="logo" href="<?php echo home_url(); ?>">
+                    <?php
+                        if (has_custom_logo()) {
+                            the_custom_logo();
+                        }
+                    ?>
                 </a>
             </div> <!-- end header__logo -->
 
