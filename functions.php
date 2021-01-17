@@ -2,7 +2,7 @@
     // TGM Plugin Activation File
     require_once 'inc/philosophy-required-plugins.php';
 
-    if ( ! class_exists( 'Attachments' ) ) {
+    if (class_exists( 'Attachments' ) ) {
         require_once 'lib/attachments.php';
     }
 
