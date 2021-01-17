@@ -1,4 +1,8 @@
 <?php
+    // TGM Plugin Activation File
+    require_once get_theme_file_path('inc/philosophy-required-plugins.php');
+
+
     function philosophy_theme_setup() {
         // Load Theme Textdomain
         load_theme_textdomain('philosophy');
