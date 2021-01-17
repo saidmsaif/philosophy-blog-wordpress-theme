@@ -1,15 +1,13 @@
 <?php
     get_header();
 
-    require_once get_theme_file_path('/template-parts/hero.php');
+    get_template_part('template-parts/hero');
+    get_template_part('template-parts/home-featured-post');
 
-    if (is_home()) {
-        require_once get_theme_file_path('/template-parts/home-featured-post.php');
-    }
 ?>
 
     <!-- s-content
-    ================================================== -->
+    ===========================================zzzz======= -->
     <section class="s-content">
 
         <div class="row masonry-wrap">
