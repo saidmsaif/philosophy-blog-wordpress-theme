@@ -48,3 +48,18 @@
         wp_enqueue_script('main-script', get_template_directory_uri().'/assets/js/main.js', array('jquery'), time(), true);
     }
     add_action('wp_enqueue_scripts', 'philosophy_assets_enqueue');
+
+
+    function philosophy_blog_home_pagination() {
+        global $wp_query;
+        $paginate_num = paginate_links(array(
+            'current'   =>  max(1, get_query_var('paged')),
+            'total'     =>  $wp_query->max_num_pages,
+            'type'      =>  'list',
+        ));
+        $paginate_num = str_replace('page-numbers', 'pgn__num', $paginate_num);
+        $paginate_num = str_replace("<ul class='pgn__num'>", '<ul>', $paginate_num);
+        $paginate_num = str_replace("<ul class='pgn__num'>", '<ul>', $paginate_num);
+        $paginate_num = str_replace("next pgn__num", 'pgn__next', $paginate_num);
+        $paginate_num = str_replace("prev pgn__num", 'pgn__prev', $paginate_num);
+        echo $paginate_num;    }
