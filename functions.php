@@ -1,6 +1,10 @@
 <?php
     // TGM Plugin Activation File
-    require_once get_template_directory().'/inc/philosophy-required-plugins.php';
+    require_once 'inc/philosophy-required-plugins.php';
+
+    if (class_exists( 'Attachments' ) ) {
+        require_once 'lib/attachments.php';
+    }
 
 
     function philosophy_theme_setup() {
