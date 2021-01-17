@@ -1,6 +1,6 @@
 <?php
     // TGM Plugin Activation File
-    require_once get_theme_file_path('inc/philosophy-required-plugins.php');
+    require_once get_template_directory().'/inc/philosophy-required-plugins.php';
 
 
     function philosophy_theme_setup() {
