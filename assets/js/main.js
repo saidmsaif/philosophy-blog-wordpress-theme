@@ -625,5 +625,7 @@
         clGoogleMap();
 
     })();
-        
+    
 })(jQuery);
+
+
