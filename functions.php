@@ -2,11 +2,6 @@
     // TGM Plugin Activation File
     require_once 'inc/philosophy-required-plugins.php';
 
-    if (class_exists( 'Attachments' ) ) {
-        require_once 'lib/attachments.php';
-    }
-
-
     function philosophy_theme_setup() {
         // Load Theme Textdomain
         load_theme_textdomain('philosophy');
@@ -51,6 +46,7 @@
         // Scripts Enqueue
         wp_enqueue_script('plugins-script', get_template_directory_uri().'/assets/js/plugins.js', null, time(), true);
         wp_enqueue_script('tiny-slider-script', '//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js', null, time(), true);
+        wp_enqueue_script('tinyjs-script', get_template_directory_uri().'/assets/js/tns.js', null, time(), true);
         wp_enqueue_script('main-script', get_template_directory_uri().'/assets/js/main.js', array('jquery'), time(), true);
     }
     add_action('wp_enqueue_scripts', 'philosophy_assets_enqueue');
