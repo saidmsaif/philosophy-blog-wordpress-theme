@@ -2,7 +2,10 @@
     get_header();
 
     get_template_part('template-parts/hero');
-    get_template_part('template-parts/home-featured-post');
+    
+    if (is_home()) :
+        get_template_part('template-parts/home-featured-post');
+    endif;
 
 ?>
 
