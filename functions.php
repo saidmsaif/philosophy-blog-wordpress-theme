@@ -45,6 +45,7 @@
         wp_enqueue_style('base-stylesheet', get_template_directory_uri().'/assets/css/base.css');
         wp_enqueue_style('vendor-stylesheet', get_template_directory_uri().'/assets/css/vendor.css');
         wp_enqueue_style('main-stylesheet', get_template_directory_uri().'/assets/css/main.css');
+        wp_enqueue_style('tiny-slider', '//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css');
         wp_enqueue_style('theme-stylesheet', get_stylesheet_uri());
 
         // Scripts Enqueue
