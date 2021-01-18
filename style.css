@@ -16,3 +16,6 @@
 
 
 
+.s-pageheader::before {
+    background-color: transparent !important;
+}

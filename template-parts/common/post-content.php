@@ -2,14 +2,14 @@
     <div class="entry__header">
 
         <div class="entry__date">
-            <a href="single-standard.html">
+            <a href="<?php the_permalink(); ?>">
                 <?php
                     echo get_the_date();
                 ?>
             </a>
         </div>
         <h1 class="entry__title">
-            <a href="single-standard.html">
+            <a href="<?php the_permalink(); ?>">
                 <?php
                     the_title();
                 ?>
