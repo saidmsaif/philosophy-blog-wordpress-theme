@@ -1,3 +1,8 @@
+<?php
+    $philosophy_audio_post = get_field('source_link');
+    if (function_exists('the_field')) :
+?>
+
 <article class="masonry__brick entry format-audio" data-aos="fade-up">
 
     <div class="entry__thumb">
@@ -8,9 +13,11 @@
                 }
             ?>
         </a>
+        <?php if ($philosophy_audio_post) : ?>
         <div class="audio-wrap">
-            <audio id="player" src="media/AirReview-Landmarks-02-ChasingCorporate.mp3" width="100%" height="42" controls="controls"></audio>
+            <audio id="player" src="<?php echo esc_url($philosophy_audio_post) ?>" width="100%" height="42" controls="controls"></audio>
         </div>
+        <?php endif; ?>
     </div>
 
     <?php
@@ -18,3 +25,6 @@
     ?>
 
 </article> <!-- end article -->
+
+<?php
+    endif;
