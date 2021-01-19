@@ -184,7 +184,7 @@
         </div> <!-- end s-footer__bottom -->
 
     </footer> <!-- end s-footer -->
-    
+
     <?php wp_footer(); ?>
 </body>
 </html>
