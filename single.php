@@ -78,22 +78,37 @@
 
             <div class="s-content__pagenav">
                 <div class="s-content__nav">
+                    <?php
+                        $philosophy_prev_post = get_previous_post();
+
+                        if ($philosophy_prev_post) :
+                    ?>
                     <div class="s-content__prev">
-                        <a href="#0" rel="prev">
-                            <span>Previous Post</span>
+                        <a href="<?php echo get_the_permalink($philosophy_prev_post); ?>" rel="prev">
+                            <span><?php _e('Previous Post', 'philosophy'); ?></span>
                             <?php
-                                previous_post_link();
+                                echo get_the_title($philosophy_prev_post);
                             ?>
                         </a>
                     </div>
+                    <?php
+                        endif;
+
+                        $philosophy_next_post = get_next_post();
+
+                        if ($philosophy_next_post) :
+                    ?>
                     <div class="s-content__next">
-                        <a href="#0" rel="next">
-                            <span>Next Post</span>
+                        <a href="<?php echo get_the_permalink($philosophy_next_post); ?>" rel="next">
+                            <span><?php _e('Next Post', 'philosophy'); ?></span>
                             <?php
-                                next_post_link();
+                                echo get_the_title($philosophy_next_post);
                             ?>
                         </a>
                     </div>
+                    <?php
+                        endif;
+                    ?>
                 </div>
             </div> <!-- end s-content__pagenav -->
 
