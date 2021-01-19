@@ -3,7 +3,17 @@
     <div id="comments" class="row">
         <div class="col-full">
 
-            <h3 class="h2">5 Comments</h3>
+            <h3 class="h2">
+                <?php
+                    $philosophy_comments_number     =   get_comments_number();
+
+                    if ($philosophy_comments_number <= 1) {
+                        echo $philosophy_comments_number." ".__('Comment', 'philosophy');
+                    } else {
+                        echo $philosophy_comments_number." ".__('Comments', 'philosophy');
+                    }
+                ?>
+            </h3>
 
             <!-- commentlist -->
             <ol class="commentlist">
@@ -14,36 +24,26 @@
 
             </ol> <!-- end commentlist -->
 
+            <div class="comments-pagination">
+                <?php
+                    the_comments_pagination(array(
+                        'screen_reader_text'            =>  __('Pagination', 'philosophy'),
+                        'prev_text'                     =>  '< '.__('Previus Comments', 'philosophy'),
+                        'next_text'                     =>  '< '.__('Next Comments', 'philosophy'),
+                    ));
+                ?>
+            </div>
+
 
             <!-- respond
             ================================================== -->
             <div class="respond">
 
-                <h3 class="h2">Add Comment</h3>
+                <h3 class="h2"><?php _e('Add Comment', 'philosophy'); ?></h3>
 
-                <form name="contactForm" id="contactForm" method="post" action="">
-                    <fieldset>
-
-                        <div class="form-field">
-                            <input name="cName" type="text" id="cName" class="full-width" placeholder="Your Name" value="">
-                        </div>
-
-                        <div class="form-field">
-                            <input name="cEmail" type="text" id="cEmail" class="full-width" placeholder="Your Email" value="">
-                        </div>
-
-                        <div class="form-field">
-                            <input name="cWebsite" type="text" id="cWebsite" class="full-width" placeholder="Website" value="">
-                        </div>
-
-                        <div class="message form-field">
-                            <textarea name="cMessage" id="cMessage" class="full-width" placeholder="Your Message"></textarea>
-                        </div>
-
-                        <button type="submit" class="submit btn--primary btn--large full-width">Submit</button>
-
-                    </fieldset>
-                </form> <!-- end form -->
+                <?php
+                    comment_form();
+                ?>
 
             </div> <!-- end respond -->
 
