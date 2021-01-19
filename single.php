@@ -56,13 +56,22 @@
 
                     <?php
                         the_author_meta('description');
+
+                        $philosophy_user_facebook = get_field('facebook', 'user_'.get_the_author_meta('ID'));
+                        $philosophy_user_twitter = get_field('twitter', 'user_'.get_the_author_meta('ID'));
+                        $philosophy_user_instagram = get_field('instagram', 'user_'.get_the_author_meta('ID'));
                     ?>
 
                     <ul class="s-content__author-social">
-                        <li><a href="#0">Facebook</a></li>
-                        <li><a href="#0">Twitter</a></li>
-                        <li><a href="#0">GooglePlus</a></li>
-                        <li><a href="#0">Instagram</a></li>
+                        <?php if ($philosophy_user_facebook) : ?>
+                            <li><a href="<?php echo esc_url($philosophy_user_facebook); ?>">Facebook</a></li>
+                        <?php endif; ?>
+                        <?php if ($philosophy_user_twitter) : ?>
+                            <li><a href="<?php echo esc_url($philosophy_user_twitter); ?>">Twitter</a></li>
+                        <?php endif; ?>
+                        <?php if ($philosophy_user_instagram) : ?>
+                            <li><a href="<?php echo esc_url($philosophy_user_instagram); ?>">Instagram</a></li>
+                        <?php endif; ?>
                     </ul>
                 </div>
             </div>
