@@ -44,12 +44,10 @@
         wp_enqueue_style('theme-stylesheet', get_stylesheet_uri());
 
         // Scripts Enqueue
-        wp_enqueue_script('plugins-script', get_template_directory_uri().'/assets/js/plugins.js', null, time(), true);
-        wp_enqueue_script('tiny-slider-script', '//cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js', null, time(), true);
-        wp_enqueue_script('tinyjs-script', get_template_directory_uri().'/assets/js/tns.js', null, time(), true);
+        wp_enqueue_script('plugins-script', get_template_directory_uri().'/assets/js/plugins.js',  array('jquery'), time(), true);
         wp_enqueue_script('modernizr-script', get_template_directory_uri().'/assets/js/modernizr.js', null, time(), true);
         wp_enqueue_script('pace-script', get_template_directory_uri().'/assets/js/pace.min.js', null, time(), true);
-        wp_enqueue_script('main-script', get_template_directory_uri().'/assets/js/main.js', null, time(), true);
+        wp_enqueue_script('main-script', get_template_directory_uri().'/assets/js/main.js', array('jquery'), time(), true);
     }
     add_action('wp_enqueue_scripts', 'philosophy_assets_enqueue');
 
