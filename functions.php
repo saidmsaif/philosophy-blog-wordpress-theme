@@ -78,9 +78,6 @@
             'after_title'   =>  '</h3>',
             'before_widget' =>  '<div class="col-block">',
             'after_widget'  =>  '</div>'
-
-
-
         ));
     }
     add_action('widgets_init', 'philosophy_widgets');
