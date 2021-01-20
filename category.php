@@ -37,7 +37,7 @@ endif;
                         get_template_part('template-parts/post-formats/post', get_post_format());
                     }
                 } else {
-                    echo '<h1 class="no-cat-post"><center>No Posts Found!</center></h1>';
+                    echo '<h3 class="no-cat-post"><center>No Posts Found!</center></h3>';
                 }
                 ?>
             </div> <!-- end masonry -->
