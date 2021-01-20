@@ -64,4 +64,7 @@
         $paginate_num = str_replace("<ul class='pgn__num'>", '<ul>', $paginate_num);
         $paginate_num = str_replace("next pgn__num", 'pgn__next', $paginate_num);
         $paginate_num = str_replace("prev pgn__num", 'pgn__prev', $paginate_num);
-        echo $paginate_num;    }
+        echo $paginate_num;
+    }
+
+    remove_action('term_description', 'wpautop');
