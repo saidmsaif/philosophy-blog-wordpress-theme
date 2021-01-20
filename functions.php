@@ -68,3 +68,19 @@
     }
 
     remove_action('term_description', 'wpautop');
+
+    function philosophy_widgets() {
+        register_sidebar(array(
+            'name'          =>  __('About Page', 'philosophy'),
+            'id'            =>  'about-page-after-content-widget',
+            'description'   =>  __('About Us Page After Content Widget', 'philosophy'),
+            'before_title'  =>  '<h3 class="quarter-top-margin">',
+            'after_title'   =>  '</h3>',
+            'before_widget' =>  '<div class="col-block">',
+            'after_widget'  =>  '</div>'
+
+
+
+        ));
+    }
+    add_action('widgets_init', 'philosophy_widgets');
