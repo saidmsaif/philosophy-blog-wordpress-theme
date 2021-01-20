@@ -3,7 +3,7 @@
     require_once 'inc/philosophy-required-plugins.php';
 
     function philosophy_theme_setup() {
-        // Load Theme Textdomain
+        // Load Theme Text domain
         load_theme_textdomain('philosophy');
 
         // Add All Theme Supports
