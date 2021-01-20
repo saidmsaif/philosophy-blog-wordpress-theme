@@ -35,7 +35,13 @@
                     the_content();
                 ?>
 
-
+                <div class="row block-1-2 block-tab-full">
+                    <?php
+                        if (is_active_sidebar('about-page-after-content-widget')) {
+                            dynamic_sidebar('about-page-after-content-widget');
+                        }
+                    ?>
+                </div>
             </div> <!-- end s-content__main -->
         </article>
     </section> <!-- s-content -->
