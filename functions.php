@@ -79,5 +79,15 @@
             'before_widget' =>  '<div class="col-block">',
             'after_widget'  =>  '</div>'
         ));
+
+        register_sidebar(array(
+            'name'          =>  __('Popular Post Sidebar', 'philosophy'),
+            'id'            =>  'popular-post-sidebar-widget',
+            'description'   =>  __('Popular Post Sidebar Widget', 'philosophy'),
+            'before_title'  =>  '<h3>',
+            'after_title'   =>  '</h3>',
+            'before_widget' =>  '<div class="col-four md-six tab-full about">',
+            'after_widget'  =>  '</div>'
+        ));
     }
     add_action('widgets_init', 'philosophy_widgets');
