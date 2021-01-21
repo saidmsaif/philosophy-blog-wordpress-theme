@@ -49,49 +49,49 @@
                 if (is_active_sidebar('popular-post-sidebar-widget')) {
                     dynamic_sidebar('popular-post-sidebar-widget');
             ?>
-                    <ul class="about__social">
-                        <?php
-                            $philosophy_pp_sidebar_facebook = get_field('philosophy_facebook');
-                            $philosophy_pp_sidebar_twitter = get_field('philosophy_twitter');
-                            $philosophy_pp_sidebar_instagram = get_field('philosophy_instagram');
-                            $philosophy_pp_sidebar_pinterest = get_field('philosophy_pinterest');
+            <ul class="about__social">
+                <?php
+                    $philosophy_pp_sidebar_facebook = get_field('philosophy_facebook');
+                    $philosophy_pp_sidebar_twitter = get_field('philosophy_twitter');
+                    $philosophy_pp_sidebar_instagram = get_field('philosophy_instagram');
+                    $philosophy_pp_sidebar_pinterest = get_field('philosophy_pinterest');
 
-                            if ($philosophy_pp_sidebar_facebook) :
-                        ?>
-                            <li>
-                                <a href="<?php echo esc_url($philosophy_pp_sidebar_facebook); ?>">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                        <?php
-                            endif;
+                    if ($philosophy_pp_sidebar_facebook) :
+                ?>
+                    <li>
+                        <a href="<?php echo esc_url($philosophy_pp_sidebar_facebook); ?>">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                <?php
+                    endif;
 
-                            if ($philosophy_pp_sidebar_twitter) :
-                        ?>
-                        <li>
-                            <a href="<?php echo esc_url($philosophy_pp_sidebar_twitter); ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <?php
-                            endif;
+                    if ($philosophy_pp_sidebar_twitter) :
+                ?>
+                <li>
+                    <a href="<?php echo esc_url($philosophy_pp_sidebar_twitter); ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </li>
+                <?php
+                    endif;
 
-                            if ($philosophy_pp_sidebar_instagram) :
-                        ?>
-                        <li>
-                            <a href="<?php echo esc_url($philosophy_pp_sidebar_instagram); ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                        </li>
-                        <?php
-                            endif;
+                    if ($philosophy_pp_sidebar_instagram) :
+                ?>
+                <li>
+                    <a href="<?php echo esc_url($philosophy_pp_sidebar_instagram); ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </li>
+                <?php
+                    endif;
 
-                            if ($philosophy_pp_sidebar_pinterest) :
-                        ?>
-                        <li>
-                            <a href="<?php echo esc_url($philosophy_pp_sidebar_pinterest); ?>"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                        </li>
+                    if ($philosophy_pp_sidebar_pinterest) :
+                ?>
+                <li>
+                    <a href="<?php echo esc_url($philosophy_pp_sidebar_pinterest); ?>"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                </li>
 
-                        <?php
-                            endif;
-                        ?>
-                    </ul> <!-- end header__social -->
+                <?php
+                    endif;
+                ?>
+            </ul> <!-- end header__social -->
             <?php
                 }
             ?>
