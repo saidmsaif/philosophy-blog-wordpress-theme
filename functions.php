@@ -89,5 +89,25 @@
             'before_widget' =>  '<div class="col-four md-six tab-full about">',
             'after_widget'  =>  '</div>'
         ));
+
+        register_sidebar(array(
+            'name'          =>  __('Philosophy Contact Page Maps', 'philosophy'),
+            'id'            =>  'philosophy-gmaps',
+            'description'   =>  __('Contact Page Google Maps', 'philosophy'),
+            'before_title'  =>  '',
+            'after_title'   =>  '',
+            'before_widget' =>  '<div id="map-wrap">',
+            'after_widget'  =>  '</div>'
+        ));
+
+        register_sidebar(array(
+            'name'          =>  __('Philosophy Contact Page Information', 'philosophy'),
+            'id'            =>  'contact-information',
+            'description'   =>  __('Contact Page Information', 'philosophy'),
+            'before_title'  =>  '<h3>',
+            'after_title'   =>  '</h3>',
+            'before_widget' =>  '<div class="col-six tab-full">',
+            'after_widget'  =>  '</div>'
+        ));
     }
     add_action('widgets_init', 'philosophy_widgets');
