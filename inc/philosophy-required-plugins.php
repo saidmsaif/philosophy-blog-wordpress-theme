@@ -70,6 +70,11 @@ function philosophy_register_required_plugins() {
             'slug'               => 'wp-google-maps', // The plugin slug (typically the folder name).
             'required'           => false, // If false, the plugin is only 'recommended?' instead of required. if a plugin is active.
         ),
+        array(
+            'name'               => 'Contact Form 7', // The plugin name.
+            'slug'               => 'contact-form-7', // The plugin slug (typically the folder name).
+            'required'           => false, // If false, the plugin is only 'recommended?' instead of required. if a plugin is active.
+        ),
 
 		// This is an example of how to include a plugin from an arbitrary external source in your theme.
 //		array(
