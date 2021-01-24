@@ -19,6 +19,8 @@
           );
       }
 
+      wp_reset_query();
+
       if ($philosophy_featured_post -> post_count > 1) :
 ?>
 
