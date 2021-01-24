@@ -44,6 +44,16 @@ the_post();
                         }
                     ?>
                 </div>
+
+                <h3>Say Hello.</h3>
+
+                <?php
+                    if (get_field('philosophy_contact')) {
+                        echo do_shortcode(get_field('philosophy_contact'));
+                    }
+                ?>
+
+                <!-- end form -->
             </div> <!-- end s-content__main -->
         </article>
     </section> <!-- s-content -->
