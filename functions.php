@@ -111,3 +111,17 @@
         ));
     }
     add_action('widgets_init', 'philosophy_widgets');
+
+    function philosophy_head() {
+        if (current_theme_supports('custom-header')) :
+?>
+        <style>
+            .wpcf7-form-control-wrap input, .wpcf7-form-control-wrap textarea {
+                width: 100% !important;
+            }
+        </style>
+<?php
+    endif;
+    }
+
+    add_action('wp_head', 'philosophy_head');
