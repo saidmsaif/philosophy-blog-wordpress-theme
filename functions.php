@@ -122,6 +122,16 @@
             'before_widget' =>  '<div class="">',
             'after_widget'  =>  '</div>',
         ));
+
+        register_sidebar(array(
+            'name'          =>  __('Philosophy Copyright', 'philosophy'),
+            'id'            =>  'philosophy_copyright',
+            'description'   =>  __('Copyright Text', 'philosophy'),
+            'before_title'  =>  '',
+            'after_title'   =>  '',
+            'before_widget' =>  '<div class="s-footer__copyright">',
+            'after_widget'  =>  '</div>',
+        ));
     }
     add_action('widgets_init', 'philosophy_widgets');
 
@@ -131,6 +141,9 @@
         <style>
             .wpcf7-form-control-wrap input, .wpcf7-form-control-wrap textarea {
                 width: 100% !important;
+            }
+            .textwidget p {
+                margin-bottom: 0;
             }
         </style>
 <?php
