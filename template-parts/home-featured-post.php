@@ -13,6 +13,7 @@
           $post_data[] = array(
               'title'       =>  get_the_title(),
               'thumbnail'   =>  get_the_post_thumbnail_url(get_the_ID(), 'large'),
+              'permalink'   => get_permalink(),
               'author'      =>  get_the_author_meta('display_name'),
               'author_avatar'   =>  get_avatar_url(get_the_author_meta('ID')),
               'date'        =>  get_the_date(),
@@ -35,7 +36,7 @@
                     <div class="entry__content">
                         <span class="entry__category"><a href="#0">Music</a></span>
 
-                        <h1><a href="#0" title=""><?php echo esc_html($post_data[0]['title']); ?></a></h1>
+                        <h1><a href="<?php echo esc_url($post_data[0]['permalink']); ?>" title=""><?php echo esc_html($post_data[0]['title']); ?></a></h1>
 
                         <div class="entry__info">
                             <a href="#0" class="entry__profile-pic">
@@ -63,7 +64,7 @@
                     <div class="entry__content">
                         <span class="entry__category"><a href="#0">Management</a></span>
 
-                        <h1><a href="#0" title=""><?php echo esc_html($post_data[$i]['title']); ?></a></h1>
+                        <h1><a href="<?php echo esc_url($post_data[$i]['permalink']); ?>" title=""><?php echo esc_html($post_data[$i]['title']); ?></a></h1>
 
                         <div class="entry__info">
                             <a href="#0" class="entry__profile-pic">
