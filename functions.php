@@ -30,6 +30,9 @@
 
         register_nav_menus(array(
             'primary-menu'      =>  __('Primary Menu', 'philosophy'),
+            'footer_left_links' =>  __('Footer Left Links', 'philosophy'),
+            'footer_middle_links'=> __('Footer Middle Links', 'philosophy'),
+            'footer_right_links'=>  __('Footer Right Links', 'philosophy'),
         ));
 
     }
