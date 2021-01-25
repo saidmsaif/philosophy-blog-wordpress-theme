@@ -112,6 +112,16 @@
             'before_widget' =>  '<div class="col-six tab-full">',
             'after_widget'  =>  '</div>'
         ));
+
+        register_sidebar(array(
+            'name'          =>  __('Footer Right Text Area', 'philosophy'),
+            'id'            =>  'footer_right_text_widget',
+            'description'   =>  __('Footer Right Text Area', 'philosophy'),
+            'before_title'  =>  '<h4>',
+            'after_title'   =>  '</h4>',
+            'before_widget' =>  '<div class="">',
+            'after_widget'  =>  '</div>',
+        ));
     }
     add_action('widgets_init', 'philosophy_widgets');
 
