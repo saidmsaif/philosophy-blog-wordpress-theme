@@ -109,6 +109,16 @@
             'before_widget' =>  '<div class="col-six tab-full">',
             'after_widget'  =>  '</div>'
         ));
+
+        register_sidebar(array(
+            'name'          =>  __('Footer Left Links', 'philosophy'),
+            'id'            =>  'footer-left-links',
+            'description'   =>  __('Footer Left Links Widget', 'philosophy'),
+            'before_widget' =>  '<div class="col-two md-four mob-full s-footer__archives">',
+            'after_widget'  =>  '</div>',
+            'before_title'  =>  '<h4>',
+            'after_title'   =>  '</h4>',
+        ));
     }
     add_action('widgets_init', 'philosophy_widgets');
 
