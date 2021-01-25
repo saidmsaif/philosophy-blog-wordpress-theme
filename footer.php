@@ -124,16 +124,15 @@
 
                 <div class="col-two md-four mob-full s-footer__sitelinks">
 
-                    <h4>Quick Links</h4>
+                    <h4><?php _e('Quick Links', 'philosophy'); ?></h4>
 
-                    <ul class="s-footer__linklist">
-                        <li><a href="#0">Home</a></li>
-                        <li><a href="#0">Blog</a></li>
-                        <li><a href="#0">Styles</a></li>
-                        <li><a href="#0">About</a></li>
-                        <li><a href="#0">Contact</a></li>
-                        <li><a href="#0">Privacy Policy</a></li>
-                    </ul>
+                    <?php
+                        wp_nav_menu(array(
+                            'theme-location'        =>  'footer_left_links',
+                            'menu_id'               =>  'footer_left_links',
+                            'menu_class'            =>  's-footer__linklist',
+                        ))
+                    ?>
 
                 </div> <!-- end s-footer__sitelinks -->
 
