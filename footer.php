@@ -192,10 +192,11 @@
         <div class="s-footer__bottom">
             <div class="row">
                 <div class="col-full">
-                    <div class="s-footer__copyright">
-                        <span>© Copyright Philosophy 2018</span>
-                        <span>Site Template by <a href="https://colorlib.com/">Colorlib</a></span>
-                    </div>
+                    <?php
+                        if (is_active_sidebar('philosophy_copyright')) {
+                            dynamic_sidebar('philosophy_copyright');
+                        }
+                    ?>
 
                     <div class="go-top">
                         <a class="smoothscroll" title="Back to Top" href="#top"></a>
