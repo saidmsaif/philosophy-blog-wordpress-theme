@@ -131,7 +131,7 @@
                             'theme-location'        =>  'footer_left_links',
                             'menu_id'               =>  'footer_left_links',
                             'menu_class'            =>  's-footer__linklist',
-                        ))
+                        ));
                     ?>
 
                 </div> <!-- end s-footer__sitelinks -->
@@ -145,23 +145,22 @@
                             'theme-location'        =>  'footer_middle_links',
                             'menu_id'               =>  'footer_middle_links',
                             'menu_class'            =>  's-footer__linklist',
-                        ))
+                        ));
                     ?>
 
                 </div> <!-- end s-footer__archives -->
 
                 <div class="col-two md-four mob-full s-footer__social">
 
-                    <h4>Social</h4>
+                    <h4><?php _e('Social', 'philosophy'); ?></h4>
 
-                    <ul class="s-footer__linklist">
-                        <li><a href="#0">Facebook</a></li>
-                        <li><a href="#0">Instagram</a></li>
-                        <li><a href="#0">Twitter</a></li>
-                        <li><a href="#0">Pinterest</a></li>
-                        <li><a href="#0">Google+</a></li>
-                        <li><a href="#0">LinkedIn</a></li>
-                    </ul>
+                    <?php
+                        wp_nav_menu(array(
+                            'theme-location'        =>  'footer_right_links',
+                            'menu_id'               =>  'footer_right_links',
+                            'menu_class'            =>  's-footer__linklist',
+                        ));
+                    ?>
 
                 </div> <!-- end s-footer__social -->
 
