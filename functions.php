@@ -151,3 +151,22 @@
     }
 
     add_action('wp_head', 'philosophy_head');
+
+    function philosophy_search_form($form) {
+        $home_dir = home_url('/');
+        $label = __('Search for:', 'philosophy');
+        $button_label   =   __('Search', 'philosophy');
+
+        $philosophy_form = <<<FORM
+            <form role="search" method="get" class="header__search-form" action="{$home_dir}">
+                <label>
+                    <span class="hide-content">{$label}</span>
+                    <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
+                </label>
+                <input type="submit" class="search-submit" value="{$button_label}">
+            </form>
+FORM;
+
+        return $philosophy_form;
+    }
+    add_filter('get_search_form', 'philosophy_search_form');
