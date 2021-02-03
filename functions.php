@@ -1,6 +1,8 @@
 <?php
     // TGM Plugin Activation File
     require_once 'inc/philosophy-required-plugins.php';
+    require_once 'lib/csf/cs-framework.php';
+    require_once 'inc/csf.php';
 
     function philosophy_theme_setup() {
         // Load Theme Text domain
